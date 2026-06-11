@@ -11,6 +11,10 @@ body {
    h2 { 
     color: rgb(76, 195, 60); 
    } 
+
+   h3{
+      color: #bc3535;
+   }
    
    h1, h3{
     text-align: center;
