@@ -47,8 +47,8 @@ console.log('A soma dos números' , 15 + 8)
 console.log(`A soma dos números $ 15 + 8`)
 console.log("A soma dos números" + num + num2)
 console.log("A soma dos números" , num2 + 8)
-console.log("A soma dos números ${num3 - num2")
-
+console.log(`A soma dos números ${num3 - num2}`) 
+    
 //OPERADORES MATEMÁTICOS
 /*
   
@@ -64,7 +64,7 @@ console.log('subtração das variáveis' , num3 - num)
 console.log('Multiplicação' , num5 * 2)
 console.log('divisão de valores' , num2 / 5)
 console.log('Resto da divisão' , num2 % 2)
-console.log('Resto da divisão ${num3 % 3}')
+console.log(`Resto da divisão ${num3 % 3}`)
 
 //OPERADORES RELACIONAIS
 /*
