@@ -8,15 +8,15 @@
 
     const objFormDados = new FormData(formDados)
 
-    let nome = parseFloat(objFormDados.get('Nome'))
-    let nota1 = parseFloat(objFormDados.get('Nota 1'))
-    let nota2 = parseFloat(objFormDados.get('Nota 2'))
-    let nota3 = parseFloat(objFormDados.get('Nota 3'))
+    let nome  = (objFormDados.get('nome'))
+    let nota1 = parseFloat(objFormDados.get('nota1'))
+    let nota2 = parseFloat(objFormDados.get('nota2'))
+    let nota3 = parseFloat(objFormDados.get('nota3'))
 
 
-    let media = '(nota1 + nota2 + nota 3) / 3'
+    let media = (nota1 + nota2 + nota3) / 3
 
-    if (idade >= 6){
+    if (media >= 6){
       situacaoAprovacao = `Aprovado`
   }else{ 
       situacaoAprovacao = `Reprovado`
@@ -25,7 +25,7 @@
    
 
 
-   divResultado.innerHTML = `A quantidade de combustível necessário:${quantidade.toFixed(2).replace('.',',')}`
+   divResultado.innerHTML = `${nome} sua média é ${media.toFixed(2)}, ${situacaoAprovacao}`
    
   
    formDados.reset()
