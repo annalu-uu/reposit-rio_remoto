@@ -8,18 +8,26 @@
 
     const objFormDados = new FormData(formDados)
 
-    let distância = parseFloat(objFormDados.get('distância'))
-    let consumo = parseFloat(objFormDados.get('consumo'))
-    let preço = parseFloat(objFormDados.get('preço'))
+    let nome = parseFloat(objFormDados.get('Nome'))
+    let nota1 = parseFloat(objFormDados.get('Nota 1'))
+    let nota2 = parseFloat(objFormDados.get('Nota 2'))
+    let nota3 = parseFloat(objFormDados.get('Nota 3'))
 
-    let quantidade = distância / consumo
+
+    let media = '(nota1 + nota2 + nota 3) / 3'
+
+    if (idade >= 6){
+      situacaoAprovacao = `Aprovado`
+  }else{ 
+      situacaoAprovacao = `Reprovado`
+  }
+
    
 
 
    divResultado.innerHTML = `A quantidade de combustível necessário:${quantidade.toFixed(2).replace('.',',')}`
    
-   
-   divResultado.innerHTML = `A quantidade de combustível necessário: ${quantidade.toFixed(2).replace('.',',')}L, 
-   Preço Deslocamento: ${parseFloat(quantidade * preço).toFixed(2).replace('.',',')}R$`
+  
+   formDados.reset()
    
  })
